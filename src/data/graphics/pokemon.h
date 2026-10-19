@@ -4008,6 +4008,34 @@ const u32 gObjectEventPic_Substitute[] = INCGFX_COMP("graphics/pokemon/question_
     const u32 gObjectEventPic_HypnoF[] = INCGFX_COMP("graphics/pokemon/hypno/overworldf.png", ".4bpp", "-mwidth 4 -mheight 4");
 #endif //OW_POKEMON_OBJECT_EVENTS
 #endif //P_GENDER_DIFFERENCES
+
+#if !P_GBA_STYLE_SPECIES_GFX
+    const u32 gMonFrontPic_Heptano[] = INCGFX_U32("graphics/pokemon/heptano/anim_front.png", ".4bpp.smol");
+    const u16 gMonPalette_Heptano[] = INCGFX_U16("graphics/pokemon/heptano/normal.pal", ".gbapal");
+    const u32 gMonBackPic_Heptano[] = INCGFX_U32("graphics/pokemon/heptano/back.png", ".4bpp.smol");
+    const u16 gMonShinyPalette_Heptano[] = INCGFX_U16("graphics/pokemon/heptano/shiny.pal", ".gbapal");
+#else
+    const u32 gMonFrontPic_Heptano[] = INCGFX_U32("graphics/pokemon/heptano/anim_front_gba.png", ".4bpp.smol");
+    const u16 gMonPalette_Heptano[] = INCGFX_U16("graphics/pokemon/heptano/normal_gba.pal", ".gbapal");
+    const u32 gMonBackPic_Heptano[] = INCGFX_U32("graphics/pokemon/heptano/back_gba.png", ".4bpp.smol");
+    const u16 gMonShinyPalette_Heptano[] = INCGFX_U16("graphics/pokemon/heptano/shiny_gba.pal", ".gbapal");
+#endif //P_GBA_STYLE_SPECIES_GFX
+#if !P_GBA_STYLE_SPECIES_ICONS
+    const u8 gMonIcon_Heptano[] = INCGFX_U8("graphics/pokemon/heptano/icon.png", ".4bpp");
+#else
+    const u8 gMonIcon_Heptano[] = INCGFX_U8("graphics/pokemon/heptano/icon_gba.png", ".4bpp");
+#endif //P_GBA_STYLE_SPECIES_ICONS
+#if P_FOOTPRINTS
+    const u8 gMonFootprint_Heptano[] = INCGFX_U8("graphics/pokemon/heptano/footprint.png", ".1bpp");
+#endif //P_FOOTPRINTS
+#if OW_POKEMON_OBJECT_EVENTS
+    const u32 gObjectEventPic_Heptano[] = INCGFX_COMP("graphics/pokemon/heptano/overworld.png", ".4bpp", "-mwidth 4 -mheight 4");
+#if OW_PKMN_OBJECTS_SHARE_PALETTES == FALSE
+    const u16 gOverworldPalette_Heptano[] = INCGFX_U16("graphics/pokemon/heptano/overworld_normal.pal", ".gbapal");
+    const u16 gShinyOverworldPalette_Heptano[] = INCGFX_U16("graphics/pokemon/heptano/overworld_shiny.pal", ".gbapal");
+#endif //OW_PKMN_OBJECTS_SHARE_PALETTES
+#endif //OW_POKEMON_OBJECT_EVENTS
+
 #endif //P_FAMILY_DROWZEE
 
 #if P_FAMILY_KRABBY
@@ -6019,6 +6047,34 @@ const u32 gObjectEventPic_Substitute[] = INCGFX_COMP("graphics/pokemon/question_
 #endif //OW_POKEMON_OBJECT_EVENTS
 #endif //P_GEN_4_CROSS_EVOS
 #endif //P_GEN_2_CROSS_EVOS
+
+#if !P_GBA_STYLE_SPECIES_GFX
+    const u32 gMonFrontPic_Malwaragon[] = INCGFX_U32("graphics/pokemon/malwaragon/anim_front.png", ".4bpp.smol");
+    const u16 gMonPalette_Malwaragon[] = INCGFX_U16("graphics/pokemon/malwaragon/normal.pal", ".gbapal");
+    const u32 gMonBackPic_Malwaragon[] = INCGFX_U32("graphics/pokemon/malwaragon/back.png", ".4bpp.smol");
+    const u16 gMonShinyPalette_Malwaragon[] = INCGFX_U16("graphics/pokemon/malwaragon/shiny.pal", ".gbapal");
+#else
+    const u32 gMonFrontPic_Malwaragon[] = INCGFX_U32("graphics/pokemon/malwaragon/anim_front_gba.png", ".4bpp.smol");
+    const u16 gMonPalette_Malwaragon[] = INCGFX_U16("graphics/pokemon/malwaragon/normal_gba.pal", ".gbapal");
+    const u32 gMonBackPic_Malwaragon[] = INCGFX_U32("graphics/pokemon/malwaragon/back_gba.png", ".4bpp.smol");
+    const u16 gMonShinyPalette_Malwaragon[] = INCGFX_U16("graphics/pokemon/malwaragon/shiny_gba.pal", ".gbapal");
+#endif //P_GBA_STYLE_SPECIES_GFX
+#if !P_GBA_STYLE_SPECIES_ICONS
+    const u8 gMonIcon_Malwaragon[] = INCGFX_U8("graphics/pokemon/malwaragon/icon.png", ".4bpp");
+#else
+    const u8 gMonIcon_Malwaragon[] = INCGFX_U8("graphics/pokemon/malwaragon/icon_gba.png", ".4bpp");
+#endif //P_GBA_STYLE_SPECIES_ICONS
+#if P_FOOTPRINTS
+    const u8 gMonFootprint_Malwaragon[] = INCGFX_U8("graphics/pokemon/malwaragon/footprint.png", ".1bpp");
+#endif //P_FOOTPRINTS
+#if OW_POKEMON_OBJECT_EVENTS
+    const u32 gObjectEventPic_Malwaragon[] = INCGFX_COMP("graphics/pokemon/malwaragon/overworld.png", ".4bpp", "-mwidth 4 -mheight 4");
+#if OW_PKMN_OBJECTS_SHARE_PALETTES == FALSE
+    const u16 gOverworldPalette_Malwaragon[] = INCGFX_U16("graphics/pokemon/malwaragon/overworld_normal.pal", ".gbapal");
+    const u16 gShinyOverworldPalette_Malwaragon[] = INCGFX_U16("graphics/pokemon/malwaragon/overworld_shiny.pal", ".gbapal");
+#endif //OW_PKMN_OBJECTS_SHARE_PALETTES
+#endif //OW_POKEMON_OBJECT_EVENTS
+
 #endif //P_FAMILY_PORYGON
 
 #if P_FAMILY_OMANYTE

@@ -13007,6 +13007,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         )
         .levelUpLearnset = sHypnoLevelUpLearnset,
         .teachableLearnset = sHypnoTeachableLearnset,
+        .formSpeciesIdTable = sHypnoFormSpeciesIdTable,
         .evolutions = EVOLUTION({EVO_LEVEL, 79, SPECIES_HEPTANO, CONDITIONS({IF_KNOWS_MOVE, MOVE_DREAM_EATER})}),
     },
 
@@ -13045,7 +13046,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .pokemonOffset = 3,
         .trainerScale = 257,
         .trainerOffset = 0,
-        .frontPic = gMonFrontPic_Hypno,
+        .frontPic = gMonFrontPic_Heptano,
         .frontPicSize = P_GBA_STYLE_SPECIES_GFX ? MON_COORDS_SIZE(56, 56) : MON_COORDS_SIZE(64, 64),
         .frontPicYOffset = P_GBA_STYLE_SPECIES_GFX ? 4 : 3,
         .frontAnimFrames = ANIM_FRAMES(
@@ -13059,29 +13060,29 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         ),
         .frontAnimId = ANIM_GROW_VIBRATE,
         .frontAnimDelay = 40,
-        .backPic = gMonBackPic_Hypno,
+        .backPic = gMonBackPic_Heptano,
         .backPicSize = P_GBA_STYLE_SPECIES_GFX ? MON_COORDS_SIZE(48, 48) : MON_COORDS_SIZE(64, 56),
         .backPicYOffset = P_GBA_STYLE_SPECIES_GFX ? 9 : 5,
         .backAnimId = BACK_ANIM_SHRINK_GROW_VIBRATE,
-        .palette = gMonPalette_Hypno,
-        .shinyPalette = gMonShinyPalette_Hypno,
-        .iconSprite = gMonIcon_Hypno,
+        .palette = gMonPalette_Heptano,
+        .shinyPalette = gMonShinyPalette_Heptano,
+        .iconSprite = gMonIcon_Heptano,
         .iconPalIndex = P_GBA_STYLE_SPECIES_ICONS ? 1 : 2,
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         SHADOW(-3, 9, SHADOW_SIZE_L)
-        FOOTPRINT(Hypno)
+        FOOTPRINT(Heptano)
         OVERWORLD(
             sPicTable_Hypno,
             SIZE_32x32,
             SHADOW_SIZE_M,
             TRACKS_FOOT,
             sAnimTable_Following,
-            gOverworldPalette_Hypno,
-            gShinyOverworldPalette_Hypno
+            gOverworldPalette_Heptano,
+            gShinyOverworldPalette_Heptano
         )
         .levelUpLearnset = sHypnoLevelUpLearnset,
         .teachableLearnset = sHypnoTeachableLearnset,
-        .formSpeciesIdTable = sHypnoFormSpeciesTable,
+        .formSpeciesIdTable = sHypnoFormSpeciesIdTable,
     },
 #endif //P_FAMILY_DROWZEE
 
@@ -19247,7 +19248,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .evolutions = EVOLUTION({EVO_ITEM, ITEM_CORRUPT_DISC, SPECIES_MALWARAGON}),
     #if P_GEN_4_CROSS_EVOS
         .evolutions = EVOLUTION({EVO_TRADE, 0, SPECIES_PORYGON_Z, CONDITIONS({IF_HOLD_ITEM, ITEM_DUBIOUS_DISC})},
-                                {EVO_ITEM, ITEM_DUBIOUS_DISC, SPECIES_PORYGON_Z},),
+                                {EVO_ITEM, ITEM_DUBIOUS_DISC, SPECIES_PORYGON_Z}),
     #endif
     },
 
@@ -19268,10 +19269,10 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .friendship = 0,
         .growthRate = GROWTH_MEDIUM_FAST,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_MINERAL),
-        .abilities = { ABILITY_DOWNLOAD, ABILITY_ANALYTIC, ABILITY_TECHNICALITY },
+        .abilities = { ABILITY_DOWNLOAD, ABILITY_ANALYTIC, ABILITY_TECHNICIAN },
         .bodyColor = BODY_COLOR_BLACK,
         .speciesName = _("Malwaragon"),
-        .cryId = CRY_MALWARAGON,
+        .cryId = CRY_PORYGON2,
         .natDexNum = NATIONAL_DEX_MALWARAGON,
         .categoryName = _("Corrupted"),
         .height = 10,
@@ -19310,7 +19311,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         SHADOW(0, 5, SHADOW_SIZE_S)
         FOOTPRINT(Malwaragon)
         OVERWORLD(
-            sPicTable_Malwaragon,
+            sPicTable_Porygon2,
             SIZE_32x32,
             SHADOW_SIZE_M,
             TRACKS_NONE,
@@ -19318,8 +19319,8 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
             gOverworldPalette_Malwaragon,
             gShinyOverworldPalette_Malwaragon
         )
-        .levelUpLearnset = sMalwaragonLevelUpLearnset,
-        .teachableLearnset = sMalwaragonTeachableLearnset,
+        .levelUpLearnset = sPorygon2LevelUpLearnset,
+        .teachableLearnset = sPorygon2TeachableLearnset,
     },
 
 #if P_GEN_4_CROSS_EVOS
