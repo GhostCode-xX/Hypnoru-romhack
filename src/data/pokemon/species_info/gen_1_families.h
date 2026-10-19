@@ -13008,7 +13008,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .levelUpLearnset = sHypnoLevelUpLearnset,
         .teachableLearnset = sHypnoTeachableLearnset,
         .formSpeciesIdTable = sHypnoFormSpeciesIdTable,
-        .evolutions = EVOLUTION({EVO_LEVEL, 79, SPECIES_HEPTANO, CONDITIONS({IF_KNOWS_MOVE, MOVE_DREAM_EATER})}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 79, SPECIES_HEPTANO, CONDITIONS({IF_KNOWS_MOVE, MOVE_DREAM_EATER},{IF_KNOWS_MOVE, MOVE_NIGHTMARE},{IF_KNOWS_MOVE, MOVE_CALM_MIND},{IF_KNOWS_MOVE, MOVE_HYPNOSIS})}),
     },
 
     [SPECIES_HEPTANO] =
