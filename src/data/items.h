@@ -4495,6 +4495,24 @@ const struct ItemInfo gItemsInfo[] =
         .iconPalette = gItemIconPalette_DubiousDisc,
     },
 
+    [ITEM_CORRUPT_DISC] =
+    {
+        .name = ITEM_NAME("Corrupt Disc"),
+        .price = (I_PRICE >= GEN_7) ? 2000 * TREASURE_FACTOR : 2100,
+        .description = COMPOUND_STRING(
+            "A transparent\n"
+            "device overflowing\n"
+            "with corrupt data."),
+        .pocket = POCKET_ITEMS,
+        .sortType = ITEM_TYPE_EVOLUTION_ITEM,
+        .type = EVO_HELD_ITEM_TYPE,
+        .fieldUseFunc = EVO_HELD_ITEM_FIELD_FUNC,
+        .effect = gItemEffect_EvoItem,
+        .flingPower = 50,
+        .iconPic = gItemIcon_DubiousDisc,
+        .iconPalette = gItemIconPalette_DubiousDisc,
+    },
+
     [ITEM_REAPER_CLOTH] =
     {
         .name = ITEM_NAME("Reaper Cloth"),

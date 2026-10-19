@@ -13007,6 +13007,81 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         )
         .levelUpLearnset = sHypnoLevelUpLearnset,
         .teachableLearnset = sHypnoTeachableLearnset,
+        .evolutions = EVOLUTION({EVO_LEVEL, 79, SPECIES_HEPTANO, CONDITIONS({IF_KNOWS_MOVE, MOVE_DREAM_EATER})}),
+    },
+
+    [SPECIES_HEPTANO] =
+    {
+        .baseHP        = 90,
+        .baseAttack    = 90,
+        .baseDefense   = 140,
+        .baseSpeed     = 10,
+        .baseSpAttack  = 90,
+        .baseSpDefense = 140,
+        .types = MON_TYPES(TYPE_PSYCHIC, TYPE_NORMAL),
+        .catchRate = 13,
+        .expYield = 215,
+        .evYield_SpDefense = 3,
+        .genderRatio = PERCENT_FEMALE(0),
+        .eggCycles = 20,
+        .friendship = STANDARD_FRIENDSHIP,
+        .growthRate = GROWTH_MEDIUM_FAST,
+        .eggGroups = MON_EGG_GROUPS(EGG_GROUP_HUMAN_LIKE),
+        .abilities = { ABILITY_INSOMNIA, ABILITY_FOREWARN, ABILITY_INNER_FOCUS },
+        .bodyColor = BODY_COLOR_YELLOW,
+        .speciesName = _("Hypno"),
+        .cryId = CRY_HYPNO,
+        .natDexNum = NATIONAL_DEX_HYPNO,
+        .categoryName = _("Hypnosis"),
+        .height = 20,
+        .weight = 1000,
+        .description = COMPOUND_STRING(
+            "HeptaNo... Un extraño experimento\n"
+            "autoinflingido por parte de un Hypno\n"
+            "desquiciado y perturbador.\n"
+            "Desconozco de donde sacó ese tipo\n"
+            "normal..."),
+        .pokemonScale = 256,
+        .pokemonOffset = 3,
+        .trainerScale = 257,
+        .trainerOffset = 0,
+        .frontPic = gMonFrontPic_Hypno,
+        .frontPicSize = P_GBA_STYLE_SPECIES_GFX ? MON_COORDS_SIZE(56, 56) : MON_COORDS_SIZE(64, 64),
+        .frontPicYOffset = P_GBA_STYLE_SPECIES_GFX ? 4 : 3,
+        .frontAnimFrames = ANIM_FRAMES(
+            ANIMCMD_FRAME(0, 15),
+            ANIMCMD_FRAME(1, 15),
+            ANIMCMD_FRAME(0, 15),
+            ANIMCMD_FRAME(1, 15),
+            ANIMCMD_FRAME(0, 15),
+            ANIMCMD_FRAME(1, 15),
+            ANIMCMD_FRAME(0, 15),
+        ),
+        .frontAnimId = ANIM_GROW_VIBRATE,
+        .frontAnimDelay = 40,
+        .backPic = gMonBackPic_Hypno,
+        .backPicSize = P_GBA_STYLE_SPECIES_GFX ? MON_COORDS_SIZE(48, 48) : MON_COORDS_SIZE(64, 56),
+        .backPicYOffset = P_GBA_STYLE_SPECIES_GFX ? 9 : 5,
+        .backAnimId = BACK_ANIM_SHRINK_GROW_VIBRATE,
+        .palette = gMonPalette_Hypno,
+        .shinyPalette = gMonShinyPalette_Hypno,
+        .iconSprite = gMonIcon_Hypno,
+        .iconPalIndex = P_GBA_STYLE_SPECIES_ICONS ? 1 : 2,
+        .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
+        SHADOW(-3, 9, SHADOW_SIZE_L)
+        FOOTPRINT(Hypno)
+        OVERWORLD(
+            sPicTable_Hypno,
+            SIZE_32x32,
+            SHADOW_SIZE_M,
+            TRACKS_FOOT,
+            sAnimTable_Following,
+            gOverworldPalette_Hypno,
+            gShinyOverworldPalette_Hypno
+        )
+        .levelUpLearnset = sHypnoLevelUpLearnset,
+        .teachableLearnset = sHypnoTeachableLearnset,
+        .formSpeciesIdTable = sHypnoFormSpeciesTable,
     },
 #endif //P_FAMILY_DROWZEE
 
@@ -19169,10 +19244,82 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         )
         .levelUpLearnset = sPorygon2LevelUpLearnset,
         .teachableLearnset = sPorygon2TeachableLearnset,
+        .evolutions = EVOLUTION({EVO_ITEM, ITEM_CORRUPT_DISC, SPECIES_MALWARAGON}),
     #if P_GEN_4_CROSS_EVOS
         .evolutions = EVOLUTION({EVO_TRADE, 0, SPECIES_PORYGON_Z, CONDITIONS({IF_HOLD_ITEM, ITEM_DUBIOUS_DISC})},
-                                {EVO_ITEM, ITEM_DUBIOUS_DISC, SPECIES_PORYGON_Z}),
+                                {EVO_ITEM, ITEM_DUBIOUS_DISC, SPECIES_PORYGON_Z},),
     #endif
+    },
+
+    [SPECIES_MALWARAGON] =
+    {
+        .baseHP        = 100,
+        .baseAttack    = 50,
+        .baseDefense   = 50,
+        .baseSpeed     = 110,
+        .baseSpAttack  = 120,
+        .baseSpDefense = 110,
+        .types = MON_TYPES(TYPE_STEEL, TYPE_ELECTRIC),
+        .catchRate = 20,
+        .expYield = 200,
+        .evYield_SpAttack = 3,
+        .genderRatio = MON_GENDERLESS,
+        .eggCycles = 20,
+        .friendship = 0,
+        .growthRate = GROWTH_MEDIUM_FAST,
+        .eggGroups = MON_EGG_GROUPS(EGG_GROUP_MINERAL),
+        .abilities = { ABILITY_DOWNLOAD, ABILITY_ANALYTIC, ABILITY_TECHNICALITY },
+        .bodyColor = BODY_COLOR_BLACK,
+        .speciesName = _("Malwaragon"),
+        .cryId = CRY_MALWARAGON,
+        .natDexNum = NATIONAL_DEX_MALWARAGON,
+        .categoryName = _("Corrupted"),
+        .height = 10,
+        .weight = 400,
+        .description = COMPOUND_STRING(
+            "A malicious virus corrupted the data of\n"
+            "Porygon2, transforming it into a dangerous\n"
+            "Pokémon. It is said to be able to hack\n"
+            "into any system and steal data from\n"
+            "anywhere in the world."),
+        .pokemonScale = 320,
+        .pokemonOffset = 17,
+        .trainerScale = 256,
+        .trainerOffset = 0,
+        .frontPic = gMonFrontPic_Malwaragon,
+        .frontPicSize = MON_COORDS_SIZE(40, 40),
+        .frontPicYOffset = 15,
+        .frontAnimFrames = ANIM_FRAMES(
+            ANIMCMD_FRAME(0, 15),
+            ANIMCMD_FRAME(1, 15),
+            ANIMCMD_FRAME(0, 15),
+            ANIMCMD_FRAME(1, 15),
+            ANIMCMD_FRAME(0, 10),
+        ),
+        .frontAnimId = ANIM_V_SQUISH_AND_BOUNCE,
+        .enemyMonElevation = P_GBA_STYLE_SPECIES_GFX ? 0 : 9,
+        .backPic = gMonBackPic_Malwaragon,
+        .backPicSize = MON_COORDS_SIZE(56, 48),
+        .backPicYOffset = P_GBA_STYLE_SPECIES_GFX ? 10 : 11,
+        .backAnimId = BACK_ANIM_H_VIBRATE,
+        .palette = gMonPalette_Malwaragon,
+        .shinyPalette = gMonShinyPalette_Malwaragon,
+        .iconSprite = gMonIcon_Malwaragon,
+        .iconPalIndex = 0,
+        .pokemonJumpType = PKMN_JUMP_TYPE_NORMAL,
+        SHADOW(0, 5, SHADOW_SIZE_S)
+        FOOTPRINT(Malwaragon)
+        OVERWORLD(
+            sPicTable_Malwaragon,
+            SIZE_32x32,
+            SHADOW_SIZE_M,
+            TRACKS_NONE,
+            sAnimTable_Following,
+            gOverworldPalette_Malwaragon,
+            gShinyOverworldPalette_Malwaragon
+        )
+        .levelUpLearnset = sMalwaragonLevelUpLearnset,
+        .teachableLearnset = sMalwaragonTeachableLearnset,
     },
 
 #if P_GEN_4_CROSS_EVOS

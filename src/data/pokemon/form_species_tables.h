@@ -400,6 +400,14 @@ static const u16 sSteelixFormSpeciesIdTable[] = {
 #endif //P_GEN_2_CROSS_EVOS
 #endif //P_FAMILY_ONIX
 
+#if P_FAMILY_DROWZEE
+static const u16 sHypnoFormSpeciesIdTable[] = {
+    SPECIES_HYPNO,
+    SPECIES_HEPTANO,
+    FORM_SPECIES_END,
+};
+#endif //P_FAMILY_DROWZEE
+
 #if P_FAMILY_KRABBY
 static const u16 sKinglerFormSpeciesIdTable[] = {
     SPECIES_KINGLER,
