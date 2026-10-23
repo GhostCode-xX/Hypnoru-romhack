@@ -23793,4 +23793,53 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .ignoresProtect = TRUE,
         .battleAnimScript = gBattleAnimMove_GMaxRapidFlow,
     },
+
+    // ===== Hypnorutización: movimientos propios del hack (GDD §11.1) =====
+
+    [MOVE_HYPNORUZATION] =
+    {
+        .name = COMPOUND_STRING("Hypnoruzation"),
+        .description = COMPOUND_STRING(
+            "Golpea con fuerza psíquica y sume\n"
+            "al rival en un sueño profundo del\n"
+            "que no puede librarse."),
+        .effect = EFFECT_HIT,
+        .power = 100,
+        .type = TYPE_PSYCHIC,
+        .accuracy = 0, // nunca falla (GDD: "Precisión — no falla")
+        .pp = 20,
+        .target = TARGET_SELECTED,
+        .priority = 3,
+        .category = DAMAGE_CATEGORY_SPECIAL,
+        .makesContact = FALSE,
+        .ignoresProtect = TRUE,      // GDD: "Atraviesa movimientos de protección y robo"
+        .mirrorMoveBanned = TRUE,
+        .mimicBanned = TRUE,
+        .sketchBanned = TRUE,
+        .copycatBanned = TRUE,
+        .additionalEffects = ADDITIONAL_EFFECTS({
+            .moveEffect = MOVE_EFFECT_SLEEP,
+            .chance = 100,
+        }),
+    },
+
+    [MOVE_CLONETA] =
+    {
+        .name = COMPOUND_STRING("Cloneta"),
+        .description = COMPOUND_STRING(
+            "Golpea con una carga de datos\n"
+            "corruptos y copia el set de\n"
+            "movimientos del rival."),
+        .effect = EFFECT_CLONETA,
+        .power = 80,
+        .type = TYPE_STEEL,
+        .accuracy = 0, // nunca falla
+        .pp = 10,
+        .target = TARGET_SELECTED,
+        .priority = 3,
+        .category = DAMAGE_CATEGORY_SPECIAL,
+        .makesContact = FALSE,
+        .mimicBanned = TRUE,
+        .sketchBanned = TRUE,
+    },
 };

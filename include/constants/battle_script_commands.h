@@ -252,7 +252,7 @@ enum BattleScriptOpcode
     B_SCR_OP_UNUSED_33,
     B_SCR_OP_UNUSED_34,
     B_SCR_OP_UNUSED_35,
-    B_SCR_OP_UNUSED_36,
+    B_SCR_OP_CLONETA, // Hypnorutización: antes B_SCR_OP_UNUSED_36.
     B_SCR_OP_UNUSED_37,
     B_SCR_OP_UNUSED_38,
     B_SCR_OP_UNUSED_39,

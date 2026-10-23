@@ -13008,7 +13008,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .levelUpLearnset = sHypnoLevelUpLearnset,
         .teachableLearnset = sHypnoTeachableLearnset,
         .formSpeciesIdTable = sHypnoFormSpeciesIdTable,
-        .evolutions = EVOLUTION({EVO_LEVEL, 79, SPECIES_HEPTANO, CONDITIONS({IF_KNOWS_MOVE, MOVE_DREAM_EATER},{IF_KNOWS_MOVE, MOVE_NIGHTMARE},{IF_KNOWS_MOVE, MOVE_CALM_MIND},{IF_KNOWS_MOVE, MOVE_HYPNOSIS})}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 79, SPECIES_HEPTANO, CONDITIONS({IF_KNOWS_MOVE, MOVE_DREAM_EATER},{IF_KNOWS_MOVE, MOVE_PSYCHIC},{IF_KNOWS_MOVE, MOVE_CALM_MIND},{IF_KNOWS_MOVE, MOVE_HYPNOSIS})}),
     },
 
     [SPECIES_HEPTANO] =
@@ -13030,7 +13030,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_HUMAN_LIKE),
         .abilities = { ABILITY_INSOMNIA, ABILITY_FOREWARN, ABILITY_INNER_FOCUS },
         .bodyColor = BODY_COLOR_YELLOW,
-        .speciesName = _("Hypno"),
+        .speciesName = _("HeptaNo"),
         .cryId = CRY_HYPNO,
         .natDexNum = NATIONAL_DEX_HYPNO,
         .categoryName = _("Hypnosis"),
@@ -13072,7 +13072,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         SHADOW(-3, 9, SHADOW_SIZE_L)
         FOOTPRINT(Heptano)
         OVERWORLD(
-            sPicTable_Hypno,
+            sPicTable_Heptano,
             SIZE_32x32,
             SHADOW_SIZE_M,
             TRACKS_FOOT,
@@ -13080,8 +13080,8 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
             gOverworldPalette_Heptano,
             gShinyOverworldPalette_Heptano
         )
-        .levelUpLearnset = sHypnoLevelUpLearnset,
-        .teachableLearnset = sHypnoTeachableLearnset,
+        .levelUpLearnset = sHeptanoLevelUpLearnset,
+        .teachableLearnset = sHeptanoTeachableLearnset,
         .formSpeciesIdTable = sHypnoFormSpeciesIdTable,
     },
 #endif //P_FAMILY_DROWZEE
@@ -19311,7 +19311,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         SHADOW(0, 5, SHADOW_SIZE_S)
         FOOTPRINT(Malwaragon)
         OVERWORLD(
-            sPicTable_Porygon2,
+            sPicTable_Malwaragon,
             SIZE_32x32,
             SHADOW_SIZE_M,
             TRACKS_NONE,

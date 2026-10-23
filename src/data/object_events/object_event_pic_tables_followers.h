@@ -821,6 +821,9 @@ static const struct SpriteFrameImage sPicTable_HypnoF[] = {
     overworld_ascending_frames(gObjectEventPic_HypnoF, 4, 4),
 };
 #endif //P_GENDER_DIFFERENCES
+static const struct SpriteFrameImage sPicTable_Heptano[] = {
+    overworld_ascending_frames(gObjectEventPic_Heptano, 4, 4),
+};
 #endif //P_FAMILY_DROWZEE
 
 #if P_FAMILY_KRABBY
@@ -1274,6 +1277,9 @@ static const struct SpriteFrameImage sPicTable_PorygonZ[] = {
 };
 #endif //P_GEN_4_CROSS_EVOS
 #endif //P_GEN_2_CROSS_EVOS
+static const struct SpriteFrameImage sPicTable_Malwaragon[] = {
+    overworld_ascending_frames(gObjectEventPic_Malwaragon, 4, 4),
+};
 #endif //P_FAMILY_PORYGON
 
 #if P_FAMILY_OMANYTE

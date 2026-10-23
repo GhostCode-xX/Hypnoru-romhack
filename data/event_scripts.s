@@ -129,6 +129,10 @@ gStdScripts::
 	.4byte Std_ReceivedItem            @ STD_RECEIVED_ITEM
 gStdScripts_End::
 
+	.include "data/maps/AlpPalletTown/scripts.inc"
+	.include "data/maps/AlpRoute1/scripts.inc"
+	.include "data/maps/AlpViridianCity/scripts.inc"
+	.include "data/maps/AlpRoute22/scripts.inc"
 
 	.include "data/maps/PetalburgCity/scripts.inc"
 	.include "data/maps/SlateportCity/scripts.inc"

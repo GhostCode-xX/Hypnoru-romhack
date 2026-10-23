@@ -1797,6 +1797,18 @@ BattleScript_EffectTransform::
 	waitmessage B_WAIT_TIME_LONG
 	goto BattleScript_MoveEnd
 
+BattleScript_EffectCloneta::
+	attackcanceler
+	critmessage
+	waitmessage B_WAIT_TIME_LONG
+	resultmessage
+	waitmessage B_WAIT_TIME_LONG
+	jumpifmovehadnoeffect BattleScript_MoveEnd
+	cloneta
+	printstring STRINGID_PKMNLEARNEDMOVE2
+	waitmessage B_WAIT_TIME_LONG
+	goto BattleScript_MoveEnd
+
 BattleScript_EffectReflect::
 	attackcanceler
 	setreflect

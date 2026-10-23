@@ -1,0 +1,2 @@
+AlpViridianCity_MapScripts::
+	.byte 0

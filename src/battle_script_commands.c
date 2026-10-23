@@ -482,6 +482,7 @@ static void Cmd_updatestatusicon(void);
 static void Cmd_setmist(void);
 static void Cmd_setfocusenergy(void);
 static void Cmd_transformdataexecution(void);
+static void Cmd_cloneta(void); // Hypnorutización: copia el moveset del objetivo (sin tocar especie/tipo/stats).
 static void Cmd_setsubstitute(void);
 static void Cmd_mimicattackcopy(void);
 static void Cmd_setcalledmove(void);
@@ -803,7 +804,7 @@ void (*const gBattleScriptingCommandsTable[])(void) =
     [B_SCR_OP_UNUSED_33]                             = Cmd_dummy,
     [B_SCR_OP_UNUSED_34]                             = Cmd_dummy,
     [B_SCR_OP_UNUSED_35]                             = Cmd_dummy,
-    [B_SCR_OP_UNUSED_36]                             = Cmd_dummy,
+    [B_SCR_OP_CLONETA]                               = Cmd_cloneta,
     [B_SCR_OP_UNUSED_37]                             = Cmd_dummy,
     [B_SCR_OP_UNUSED_38]                             = Cmd_dummy,
     [B_SCR_OP_UNUSED_39]                             = Cmd_dummy,
@@ -5990,6 +5991,33 @@ static void Cmd_transformdataexecution(void)
         MarkBattlerForControllerExec(gBattlerAttacker);
         gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_TRANSFORMED;
     }
+}
+
+// Hypnorutización: Cloneta copia el moveset completo del objetivo. A diferencia de
+// EFFECT_TRANSFORM, NO toca especie/tipo/stats/habilidad del atacante, y cada
+// movimiento copiado recibe su PP máximo real (no el límite de 5 PP de Transformación).
+static void Cmd_cloneta(void)
+{
+    CMD_ARGS();
+    s32 i;
+
+    gBattleMons[gBattlerAttacker].volatiles.mimickedMoves = 0;
+
+    PREPARE_SPECIES_BUFFER(gBattleTextBuff1, gBattleMons[gBattlerTarget].species)
+
+    for (i = 0; i < MAX_MON_MOVES; i++)
+    {
+        gBattleMons[gBattlerAttacker].moves[i] = gBattleMons[gBattlerTarget].moves[i];
+        gBattleMons[gBattlerAttacker].pp[i] = GetMovePP(gBattleMons[gBattlerAttacker].moves[i]);
+    }
+
+    // actualiza el conocimiento de la IA sobre el nuevo set del atacante
+    RecordAllMoves(gBattlerAttacker);
+
+    BtlController_EmitResetActionMoveSelection(gBattlerAttacker, B_COMM_TO_CONTROLLER, RESET_MOVE_SELECTION);
+    MarkBattlerForControllerExec(gBattlerAttacker);
+
+    gBattlescriptCurrInstr = cmd->nextInstr;
 }
 
 static void Cmd_setsubstitute(void)

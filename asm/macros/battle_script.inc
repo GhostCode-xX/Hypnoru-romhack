@@ -772,6 +772,11 @@
 	.byte B_SCR_OP_TRANSFORMDATAEXECUTION
 	.endm
 
+	@ Hypnorutización: copia el moveset completo del objetivo (Cloneta).
+	.macro cloneta
+	.byte B_SCR_OP_CLONETA
+	.endm
+
 	.macro setsubstitute
 	.byte B_SCR_OP_SETSUBSTITUTE
 	.endm

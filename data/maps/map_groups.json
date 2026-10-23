@@ -77,6 +77,10 @@
     "gMapGroup_IndoorSevenIslandRoute_Frlg"
   ],
   "gMapGroup_TownsAndRoutes": [
+    "AlpPalletTown",
+    "AlpRoute1",
+    "AlpViridianCity",
+    "AlpRoute22",
     "PetalburgCity",
     "SlateportCity",
     "MauvilleCity",
